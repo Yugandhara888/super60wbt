@@ -1,0 +1,25 @@
+<!-- create a paragraph with some dummy content , on mouse over change the paragraph content ( hint: no hint in
+this case ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Content on Mouseover</title>
+</head>
+<body>
+
+<!-- Paragraph with some dummy content -->
+<p id="myParagraph" onmouseover="changeContent()">This is some dummy content.</p>
+
+<script>
+    // Function to change the paragraph content on mouseover
+    function changeContent() {
+        // Change the content of the paragraph
+        document.getElementById("myParagraph").innerHTML = "The content has been changed on mouseover!";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- create an array with five value (i.e 10,20,30,40,50) . now search value 10 & 100 from the given array &
+print its position. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Values in Array</title>
+</head>
+<body>
+    <button onclick="searchValues()">Search Values</button>
+    <p id="resultDisplay"></p>
+
+    <script>
+        // Initial array with five values
+        let myArray = [10, 20, 30, 40, 50];
+
+        // Function to search for values 10 and 100
+        function searchValues() {
+            const searchValues = [10, 100];
+            let result = '';
+
+            // Loop through the search values
+            searchValues.forEach(value => {
+                const position = myArray.indexOf(value);
+                
+                // Check if the value is found
+                if (position !== -1) {
+                    result += `Value ${value} found at position: ${position}<br>`;
+                } else {
+                    result += `Value ${value} not found in the array<br>`;
+                }
+            });
+
+            // Display the result
+            document.getElementById('resultDisplay').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

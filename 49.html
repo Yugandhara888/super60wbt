@@ -1,0 +1,37 @@
+<!-- create a text box , get value from the same. do the validation for emailid & show result in paragraph (
+below textbox) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <h2>Enter Your Email:</h2>
+    <input type="text" id="email" placeholder="Enter your email" />
+    <button onclick="validateEmail()">Validate</button>
+    <p id="resultDisplay"></p>
+
+    <script>
+        function validateEmail() {
+            // Get the value from the text box
+            const email = document.getElementById('email').value;
+            const resultDisplay = document.getElementById('resultDisplay');
+
+            // Define a regular expression for a valid email
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            // Validate the input
+            if (emailPattern.test(email)) {
+                resultDisplay.textContent = "Valid email address!";
+                resultDisplay.style.color = "green";
+            } else {
+                resultDisplay.textContent = "Invalid email address! Please enter a valid email.";
+                resultDisplay.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

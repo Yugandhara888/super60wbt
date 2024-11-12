@@ -1,0 +1,47 @@
+<!-- create a textbox (with id txt) & get value.
+if the value is string then show error in paragraph as only number is required -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox Validation for Numbers</title>
+    <style>
+        /* Styling for the error message */
+        #error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Textbox to input data -->
+<input type="text" id="txt" placeholder="Enter a number">
+
+<!-- Button to check if the value is a number -->
+<button onclick="checkValue()">Check Value</button>
+
+<!-- Paragraph to show error message -->
+<p id="error"></p>
+
+<script>
+    // Function to check if the entered value is a number
+    function checkValue() {
+        // Get the value from the textbox
+        var value = document.getElementById("txt").value;
+
+        // Check if the value is a number using isNaN()
+        if (isNaN(value) || value === "") {
+            // If the value is not a number, display an error message
+            document.getElementById("error").textContent = "Error: Only numbers are required!";
+        } else {
+            // If the value is a valid number, clear the error message
+            document.getElementById("error").textContent = "";
+        }
+    }
+</script>
+
+</body>
+</html>

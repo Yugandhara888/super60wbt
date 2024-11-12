@@ -1,0 +1,24 @@
+<!--  how to create an array using ( new Array() functionality ) in javascript?
+please write down sample code with some value in array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Using new Array()</title>
+</head>
+<body>
+    <h2>Array Created Using new Array() Constructor</h2>
+    <p id="resultDisplay"></p>
+
+    <script>
+        // Create an array using new Array() with values
+        const myArray = new Array(10, 20, 30, 40, 50);
+
+        // Display the result in the console and on the web page
+        console.log(myArray);  // Log the array in the console
+        document.getElementById('resultDisplay').textContent = `Array: [${myArray}]`;
+    </script>
+</body>
+</html>

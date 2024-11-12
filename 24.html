@@ -1,0 +1,29 @@
+<!--  create a paragraph with some dummy content , on button double click change the paragraph background color
+to grey ( hint : use style & getElementById() functionality)
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color on Double Click</title>
+</head>
+<body>
+
+<!-- Paragraph with some dummy content -->
+<p id="myParagraph">This is some dummy content.</p>
+
+<!-- Button to change the paragraph background color on double-click -->
+<button ondblclick="changeBackgroundColor()">Double Click Me</button>
+
+<script>
+    // Function to change the background color of the paragraph
+    function changeBackgroundColor() {
+        // Use getElementById to select the paragraph and change its background color
+        document.getElementById("myParagraph").style.backgroundColor = "grey";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Function Example</title>
+    <style>
+        input {
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Focus and Blur Example</h2>
+<!-- Textbox to trigger the events -->
+<input type="text" id="inputBox" placeholder="Focus or blur this box">
+
+<script>
+    // Anonymous function assigned to calculate
+    const calculate = function() {
+        console.log("Dummy text: Function called");
+    }
+
+    // Attach the onfocus and onblur events to the textbox
+    document.getElementById("inputBox").onfocus = calculate;  // Calls on focus
+    document.getElementById("inputBox").onblur = calculate;   // Calls on blur
+</script>
+
+</body>
+</html>

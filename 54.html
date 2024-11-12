@@ -1,0 +1,37 @@
+<!-- generate an example to show the difference between parseInt() & Number() function (Hint: take any value as
+an input)
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between parseInt() and Number()</title>
+</head>
+<body>
+    <h2>parseInt() vs. Number() Example</h2>
+
+    <input type="text" id="inputValue" placeholder="Enter a value" />
+    <button onclick="showDifference()">Show Difference</button>
+    <p id="parseIntResult"></p>
+    <p id="numberResult"></p>
+
+    <script>
+        function showDifference() {
+            // Get the input value from the text box
+            const inputValue = document.getElementById('inputValue').value;
+
+            // Use parseInt() to convert the input to an integer
+            const parseIntResult = parseInt(inputValue);
+
+            // Use Number() to convert the input to a number
+            const numberResult = Number(inputValue);
+
+            // Display the results
+            document.getElementById('parseIntResult').textContent = `parseInt("${inputValue}") = ${parseIntResult}`;
+            document.getElementById('numberResult').textContent = `Number("${inputValue}") = ${numberResult}`;
+        }
+    </script>
+</body>
+</html>

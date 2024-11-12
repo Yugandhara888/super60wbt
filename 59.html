@@ -1,0 +1,32 @@
+<!-- generate a function name calculate (Note: here you must have anonymous function instead of regular function).
+print dummy text in console.
+a) call the same function using onblur event ( here use textbox )
+b) call the same function using onfocus event ( here use textbox )
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Function Example</title>
+</head>
+<body>
+    <h2>Using Anonymous Function in calculate()</h2>
+    
+    <input type="text" id="inputBox" placeholder="Focus or Blur here">
+    
+    <script>
+        // Anonymous function inside the calculate function
+        const calculate = function() {
+            console.log("Dummy text printed in console.");
+        };
+
+        // Call the calculate function using onblur event
+        document.getElementById("inputBox").onblur = calculate;
+
+        // Call the calculate function using onfocus event
+        document.getElementById("inputBox").onfocus = calculate;
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!--  create an array with any five value . on button click remove first value -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove First Value from Array</title>
+</head>
+<body>
+    <button onclick="removeFirstValue()">Remove First Value</button>
+    <p id="arrayDisplay"></p>
+
+    <script>
+        // Initial array with five values
+        let myArray = [1, 3, 5, 7, 9];
+        
+        // Function to remove the first value from the array
+        function removeFirstValue() {
+            if (myArray.length > 0) {
+                myArray.shift(); // Removes the first element
+                document.getElementById('arrayDisplay').textContent = `Array: [${myArray}]`;
+            } else {
+                alert("Array is already empty!");
+            }
+        }
+
+        // Display the initial array
+        document.getElementById('arrayDisplay').textContent = `Array: [${myArray}]`;
+    </script>
+</body>
+</html>
+

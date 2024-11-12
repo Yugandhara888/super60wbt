@@ -1,0 +1,38 @@
+<!-- create a textbox (with id txt) & get value from textbox & check whether the entered value is string or
+number (hint: use isNaN() & if-else). show the result in console
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Value is String or Number</title>
+</head>
+<body>
+
+<!-- Textbox to input data -->
+<input type="text" id="txt" placeholder="Enter a value">
+
+<!-- Button to check the value -->
+<button onclick="checkValue()">Check Value</button>
+
+<script>
+    // Function to check whether the entered value is a string or number
+    function checkValue() {
+        // Get the value from the textbox
+        var value = document.getElementById("txt").value;
+
+        // Check if the value is a number or a string using isNaN()
+        if (isNaN(value)) {
+            // If it's not a number, it's a string
+            console.log("The entered value is a string.");
+        } else {
+            // If it's a number
+            console.log("The entered value is a number.");
+        }
+    }
+</script>
+
+</body>
+</html>

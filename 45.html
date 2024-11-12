@@ -1,0 +1,32 @@
+<!--  create an array with any five value . on button click remove last value  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Last Value from Array</title>
+</head>
+<body>
+    <button onclick="removeValue()">Remove Last Value</button>
+    <p id="arrayDisplay"></p>
+
+    <script>
+        // Initial array with five values
+        let myArray = [2, 4, 6, 8, 10];
+        
+        // Function to remove the last value from the array
+        function removeValue() {
+            if (myArray.length > 0) {
+                myArray.pop(); // Removes the last element
+                document.getElementById('arrayDisplay').textContent = `Array: [${myArray}]`;
+            } else {
+                alert("Array is already empty!");
+            }
+        }
+
+        // Display the initial array
+        document.getElementById('arrayDisplay').textContent = `Array: [${myArray}]`;
+    </script>
+</body>
+</html>

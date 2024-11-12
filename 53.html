@@ -1,0 +1,26 @@
+<!-- generate an array with value [1,4,6,8,12,11,13] and show the resuke as new array=> [1,11,14] using filter()
+function of javascript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filtering Example</title>
+</head>
+<body>
+    <h2>Filter Odd Numbers from Array</h2>
+    <p id="resultDisplay"></p>
+
+    <script>
+        // Original array
+        const myArray = [1, 4, 6, 8, 12, 11, 13];
+
+        // Filter the array to include only odd numbers
+        const filteredArray = myArray.filter(value => value % 2 !== 0);
+
+        // Display the result
+        document.getElementById('resultDisplay').textContent = `Filtered Array: [${filteredArray}]`;
+    </script>
+</body>
+</html>

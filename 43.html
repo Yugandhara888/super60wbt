@@ -1,0 +1,33 @@
+<!--  create an array with any three value . on button click add value 10 within an array (i.e at the end ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Modification</title>
+</head>
+<body>
+
+<!-- Button to trigger the array modification -->
+<button onclick="addValue()">Add 10 to Array</button>
+
+<!-- Paragraph to display the updated array -->
+<p id="arrayOutput"></p>
+
+<script>
+    // Initial array with three values
+    var numbers = [5, 15, 25];
+
+    // Function to add value 10 to the array
+    function addValue() {
+        // Add 10 to the end of the array using push()
+        numbers.push(10);
+
+        // Display the updated array in the paragraph
+        document.getElementById('arrayOutput').innerText = 'Updated Array: ' + numbers.join(', ');
+    }
+</script>
+
+</body>
+</html>

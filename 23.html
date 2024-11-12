@@ -1,0 +1,29 @@
+<!--  create a paragraph with some dummy content , on button click change the paragraph value ( hint : use
+innerHTML & querySelector() functionality)
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Paragraph Content</title>
+</head>
+<body>
+
+<!-- Paragraph with some dummy content -->
+<p id="myParagraph">This is some dummy content.</p>
+
+<!-- Button to change the paragraph content -->
+<button onclick="changeParagraph()">Change Paragraph</button>
+
+<script>
+    // Function to change the paragraph content
+    function changeParagraph() {
+        // Use querySelector to select the paragraph and change its innerHTML
+        document.querySelector("#myParagraph").innerHTML = "The paragraph content has been changed!";
+    }
+</script>
+
+</body>
+</html>

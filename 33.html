@@ -1,0 +1,45 @@
+<!--  create a textbox (with id txt) & get value from textbox , in case textbox is empty then please show textbox
+border with color red & border width 2px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:,">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox Validation</title>
+    <style>
+        /* Default style for the textbox */
+        #txt {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Textbox to input data -->
+<input type="text" id="txt" placeholder="Enter something">
+
+<!-- Button to check if the textbox is empty -->
+<button onclick="checkTextbox()">Check Textbox</button>
+
+<script>
+    // Function to check if the textbox is empty
+    function checkTextbox() {
+        // Get the value of the textbox
+        var txtValue = document.getElementById("txt").value;
+
+        // If the textbox is empty, change the border style
+        if (txtValue === "") {
+            document.getElementById("txt").style.borderColor = "red";
+            document.getElementById("txt").style.borderWidth = "2px";
+        } else {
+            // If the textbox is not empty, remove the red border
+            document.getElementById("txt").style.borderColor = "";
+            document.getElementById("txt").style.borderWidth = "";
+        }
+    }
+</script>
+
+</body>
+</html>

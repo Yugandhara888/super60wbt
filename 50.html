@@ -1,0 +1,38 @@
+<!--  create a text box , get value from the same. do the validation for name & show result in paragraph ( below
+textbox) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Validation</title>
+</head>
+<body>
+    <h2>Enter Your Name:</h2>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <button onclick="validateName()">Validate</button>
+    <p id="resultDisplay"></p>
+
+    <script>
+        function validateName() {
+            // Get the value from the text box
+            const name = document.getElementById('name').value.trim();
+            const resultDisplay = document.getElementById('resultDisplay');
+
+            // Define a regular expression for a valid name
+            const namePattern = /^[a-zA-Z\s-]{2,}$/;
+
+            // Validate the input
+            if (namePattern.test(name)) {
+                resultDisplay.textContent = "Valid name!";
+                resultDisplay.style.color = "green";
+            } else {
+                resultDisplay.textContent = "Invalid name! Please enter only letters, spaces, or hyphens with at least 2 characters.";
+                resultDisplay.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
+

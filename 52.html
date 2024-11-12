@@ -1,0 +1,29 @@
+<!-- generate an array with value [1,2,3,4] and show the result as new array=> [1,4,9,16] using for in loop ,
+forEach loop and map() function -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Squaring Examples</title>
+</head>
+<body>
+    <h2>Square the values in the array [1, 2, 3, 4]</h2>
+    <p id="forInResult"></p>
+    <p id="forEachResult"></p>
+    <p id="mapResult"></p>
+
+    <script>
+        // Original array
+        const myArray = [1, 2, 3, 4];
+
+        // Method 2: Using forEach Loop
+        let squaredArrayForEach = [];
+        myArray.forEach(value => {
+            squaredArrayForEach.push(value ** 2);
+        });
+        document.getElementById('forEachResult').textContent = `Using forEach loop: [${squaredArrayForEach}]`;
+
+    </script>
+</body>
+</html>

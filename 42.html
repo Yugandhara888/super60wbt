@@ -1,0 +1,28 @@
+<!-- generate a series from 1 to 10 & show square of odd number , cube of even no ( hint: use any loop & modulus
+opearator ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square and Cube of Numbers</title>
+</head>
+<body>
+
+<script>
+    // Loop to generate a series from 1 to 10
+    for (var i = 1; i <= 10; i++) {
+        // Check if the number is odd using modulus operator
+        if (i % 2 !== 0) {
+            // Square of odd numbers
+            console.log("Square of " + i + " is " + Math.pow(i, 2)); // or i * i
+        } else {
+            // Cube of even numbers
+            console.log("Cube of " + i + " is " + Math.pow(i, 3)); // or i * i * i
+        }
+    }
+</script>
+
+</body>
+</html>
